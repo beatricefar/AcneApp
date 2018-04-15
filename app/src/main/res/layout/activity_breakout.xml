@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParent"
+    tools:context=".BreakoutActivity">
+
+    <TextView
+        android:id="@+id/information_textView"
+        style="@style/WrapContent"
+        android:text="@string/breakout_header_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="@dimen/breakout_layout_bias_vertical" />
+
+    <LinearLayout
+        style="@style/WrapContent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/information_textView"
+        android:padding="@dimen/breakout_buttons_layout_padding">
+
+        <Button
+            android:id="@+id/breakout_0"
+            style="@style/BreakoutLevelButton"
+            android:text="@string/breakout_level_0"/>
+
+        <Button
+            android:id="@+id/breakout_1"
+            style="@style/BreakoutLevelButton"
+            android:text="@string/breakout_level_1"/>
+
+        <Button
+            android:id="@+id/breakout_2"
+            style="@style/BreakoutLevelButton"
+            android:text="@string/breakout_level_2"/>
+
+        <Button
+            android:id="@+id/breakout_3"
+            style="@style/BreakoutLevelButton"
+            android:text="@string/breakout_level_3"/>
+
+        <Button
+            android:id="@+id/breakout_4"
+            style="@style/BreakoutLevelButton"
+            android:text="@string/breakout_level_4"/>
+
+        <Button
+            android:id="@+id/breakout_5"
+            style="@style/BreakoutLevelButton"
+            android:text="@string/breakout_level_5"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Breakout Layout dimensions-->
+    <dimen name="breakout_layout_bias_vertical">0.4</dimen>
+    <dimen name="breakout_buttons_layout_padding">16dp</dimen>
+
+</resources>

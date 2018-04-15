@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">AcneApp</string>
+
+    <!--Activity titles-->
+
+    <string name="breakout_activity">Add breakout information</string>
+    <string name="home_activity">Meals</string>
+
+    <!--Breakout Activity-->
+
+    <string name="breakout_header_info">Rate your breakout</string>
+
+    <string name="breakout_level_0">0</string>
+    <string name="breakout_level_1">1</string>
+    <string name="breakout_level_2">2</string>
+    <string name="breakout_level_3">3</string>
+    <string name="breakout_level_4">4</string>
+    <string name="breakout_level_5">5</string>
+
 </resources>
