@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <Button
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/action_add_meal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add meal"/>
+        style="@style/WrapContent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_action_add"
+        android:layout_margin="@dimen/fabMargin" />
 
 </android.support.constraint.ConstraintLayout>

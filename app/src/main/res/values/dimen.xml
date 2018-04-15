@@ -9,4 +9,7 @@
     <dimen name="editorLayoutPadding">16dp</dimen>
     <dimen name="spinnerHeight">48dp</dimen>
 
+    <!--Floating action button dimensions-->
+    <dimen name="fabMargin">30dp</dimen>
+
 </resources>

@@ -1,6 +1,7 @@
 package com.beatricefarias.acneapp;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,7 +15,7 @@ import butterknife.OnClick;
 public class HomeActivity extends AppCompatActivity {
 
     @BindView(R.id.action_add_meal)
-    Button addMeal;
+    FloatingActionButton addMeal;
 
     private Intent editorActivity;
 
@@ -28,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.action_add_meal)
-    public void addMeal(Button addMeal) {
+    public void addMeal(FloatingActionButton addMeal) {
         editorActivity = new Intent(HomeActivity.this, EditorActivity.class);
         startActivity(editorActivity);
     }
