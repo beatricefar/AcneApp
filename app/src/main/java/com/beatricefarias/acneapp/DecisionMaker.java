@@ -71,7 +71,7 @@ public class DecisionMaker {
      * @param today            date
      * @return boolean if breakout information was already put in today
      */
-    public boolean breakoutHappenedToday(String lastBreakoutDate, String today) {
+    private boolean breakoutHappenedToday(String lastBreakoutDate, String today) {
         return lastBreakoutDate.equals(today);
     }
 

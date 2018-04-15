@@ -5,14 +5,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HomeActivity extends AppCompatActivity {
+
+    @BindView(R.id.action_add_meal)
+    Button addMeal;
+
+    private Intent editorActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        ButterKnife.bind(this);
         setTitle(R.string.home_activity);
+
+    }
+
+    @OnClick(R.id.action_add_meal)
+    public void addMeal(Button addMeal) {
+        editorActivity = new Intent(HomeActivity.this, EditorActivity.class);
+        startActivity(editorActivity);
     }
 
     /**
@@ -49,5 +67,4 @@ public class HomeActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

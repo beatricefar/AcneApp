@@ -4,4 +4,9 @@
     <dimen name="breakout_layout_bias_vertical">0.4</dimen>
     <dimen name="breakout_buttons_layout_padding">16dp</dimen>
 
+    <!--Editor Layout dimensions-->
+    <dimen name="editorTextMarginEnd">16dp</dimen>
+    <dimen name="editorLayoutPadding">16dp</dimen>
+    <dimen name="spinnerHeight">48dp</dimen>
+
 </resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParent"
+    tools:context=".EditorActivity"
+    android:padding="@dimen/editorLayoutPadding">
+
+    <LinearLayout
+        android:id="@+id/add_food_layout"
+        style="@style/MatchWrap">
+
+        <TextView
+            style="@style/WrapContent.EditorTextInfo"
+            android:text="@string/editor_food_info" />
+
+        <EditText
+            style="@style/MatchWrap.EditorEditText"
+            android:id="@+id/edit_food_info"
+            android:hint="@string/editor_food_hint"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_category_layout"
+        style="@style/MatchWrap"
+        app:layout_constraintTop_toBottomOf="@id/add_food_layout">
+
+        <TextView
+            style="@style/WrapContent.EditorTextInfo"
+            android:text="@string/editor_category_info" />
+
+        <EditText
+            android:id="@+id/edit_food_category"
+            style="@style/MatchWrap.EditorEditText"
+            android:hint="@string/editor_category_hint"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/MatchWrap"
+        app:layout_constraintTop_toBottomOf="@id/add_category_layout">
+
+        <TextView
+            style="@style/WrapContent.EditorTextInfo"
+            android:text="@string/spinner_meal_info" />
+
+        <Spinner
+            android:id="@+id/spinner_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/spinnerHeight"
+            android:spinnerMode="dropdown"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

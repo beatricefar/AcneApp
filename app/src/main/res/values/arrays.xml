@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_meal_options">
+        <item>@string/option_spinner_breakfast</item>
+        <item>@string/option_spinner_lunch</item>
+        <item>@string/option_spinner_dinner</item>
+        <item>@string/option_spinner_snack</item>
+    </string-array>
+</resources>

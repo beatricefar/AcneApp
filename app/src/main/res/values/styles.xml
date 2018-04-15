@@ -20,12 +20,30 @@
         <item name="android:layout_height">match_parent</item>
     </style>
 
+    <style name="MatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <!--Breakout Layout styles-->
 
     <style name="BreakoutLevelButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--Editor Activity styles-->
+
+    <style name="WrapContent.EditorTextInfo">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginEnd">@dimen/editorTextMarginEnd</item>
+    </style>
+
+    <style name="MatchWrap.EditorEditText">
+        <item name="android:inputType">text</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
 </resources>

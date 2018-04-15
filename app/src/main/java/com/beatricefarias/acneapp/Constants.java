@@ -11,4 +11,6 @@ public class Constants {
     public final static String FIRST_RUN = "firstrun";
 
     public final static String FIRST_RUN_DEFAULT_BREAKOUT_DATE = "0";
+
+    public final static String DATA_FORMAT = "yyyyMMdd";
 }

@@ -24,4 +24,22 @@
     <string name="action_insert_dummy">Insert dummy data</string>
     <string name="action_delete_entries">Delete all entries</string>
 
+    <!--Menu Editor-->
+    <string name="action_save_meal">SAVE</string>
+
+    <!--Meal Spinner Array-->
+
+    <string name="option_spinner_breakfast">Breakfast</string>
+    <string name="option_spinner_lunch">Lunch</string>
+    <string name="option_spinner_dinner">Dinner</string>
+    <string name="option_spinner_snack">Snack</string>
+
+    <!--Editor Activity-->
+
+    <string name="editor_food_info">Add food info:</string>
+    <string name="editor_food_hint">Chicken Salad</string>
+    <string name="editor_category_info">Add food category:</string>
+    <string name="editor_category_hint">Poultry</string>
+    <string name="spinner_meal_info">Choose meal:</string>
+
 </resources>

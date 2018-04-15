@@ -72,7 +72,7 @@ public class BreakoutActivity extends AppCompatActivity {
     /**
      * Method which starts home activity and finishes breakout activity.
      */
-    public void startHomeActivity() {
+    private void startHomeActivity() {
         Intent homeActivity = new Intent(BreakoutActivity.this, HomeActivity.class);
         finish();
         startActivity(homeActivity);
@@ -81,7 +81,7 @@ public class BreakoutActivity extends AppCompatActivity {
     /**
      * Method which updates shared preferences with the date of the breakout.
      */
-    public void breakoutWasLoggedToday() {
+    private void breakoutWasLoggedToday() {
         SharedPreferences preferences = getSharedPreferences(Constants.SHARED_PREFERENCES, MODE_PRIVATE);
 
         int todayInt = new Dates().getTodayDate();
