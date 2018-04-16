@@ -14,4 +14,8 @@
         android:src="@drawable/ic_action_add"
         android:layout_margin="@dimen/fabMargin" />
 
+    <TextView
+        android:id="@+id/display_db_textview"
+        style="@style/WrapContent"/>
+
 </android.support.constraint.ConstraintLayout>
