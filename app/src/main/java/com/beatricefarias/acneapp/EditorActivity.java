@@ -1,5 +1,6 @@
 package com.beatricefarias.acneapp;
 
+import com.beatricefarias.acneapp.Database.DataContract.MealEntry;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,13 +49,13 @@ public class EditorActivity extends AppCompatActivity {
                 String selection = (String) parent.getItemAtPosition(position);
                 if (!TextUtils.isEmpty(selection)) {
                     if (selection.equals(getString(R.string.option_spinner_breakfast))) {
-                        meal = 0; // Breakfast
+                        meal = MealEntry.MEAL_BREAKFAST; // Breakfast
                     } else if (selection.equals(getString(R.string.option_spinner_lunch))) {
-                        meal = 1; // Lunch
+                        meal = MealEntry.MEAL_LUNCH; // Lunch
                     } else if (selection.equals(getString(R.string.option_spinner_dinner))) {
-                        meal = 2; // Dinner
+                        meal = MealEntry.MEAL_DINNER; // Dinner
                     } else {
-                        meal = 3; // Snack
+                        meal = MealEntry.MEAL_SNACK; // Snack
                     }
                 }
             }
