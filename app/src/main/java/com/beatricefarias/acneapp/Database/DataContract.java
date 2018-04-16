@@ -83,5 +83,21 @@ public class DataContract {
          */
         public final static String COLUMN_BREAKOUT_LEVEL = "breakout_level";
 
+        /**
+         * Possible values for breakout level
+         */
+
+        public static final int BREAKOUT_LEVEL_0 = 0;
+
+        public static final int BREAKOUT_LEVEL_1 = 1;
+
+        public static final int BREAKOUT_LEVEL_2 = 2;
+
+        public static final int BREAKOUT_LEVEL_3 = 3;
+
+        public static final int BREAKOUT_LEVEL_4 = 4;
+
+        public static final int BREAKOUT_LEVEL_5 = 5;
+
     }
 }
