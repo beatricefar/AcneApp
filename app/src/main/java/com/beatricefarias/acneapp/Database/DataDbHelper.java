@@ -39,7 +39,7 @@ public class DataDbHelper extends SQLiteOpenHelper {
         String SQL_CREATE_MEAL_TABLE = "CREATE TABLE " + MealEntry.TABLE_NAME + " ("
                 + MealEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + MealEntry.COLUMN_MEAL_DATE + " INTEGER NOT NULL, "
-                + MealEntry.COLUMN_MEAL_TYPE + " TEXT NOT NULL, "
+                + MealEntry.COLUMN_MEAL_TYPE + " INTEGER NOT NULL, "
                 + MealEntry.COLUMN_FOOD + " TEXT NOT NULL, "
                 + MealEntry.COLUMN_FOOD_CATEGORY + " TEXT NOT NULL);";
         db.execSQL(SQL_CREATE_MEAL_TABLE);

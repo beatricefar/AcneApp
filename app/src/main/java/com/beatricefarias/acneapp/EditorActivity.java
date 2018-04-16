@@ -1,10 +1,17 @@
 package com.beatricefarias.acneapp;
 
+import com.beatricefarias.acneapp.Database.DataContract;
 import com.beatricefarias.acneapp.Database.DataContract.MealEntry;
+import com.beatricefarias.acneapp.Database.DataDbHelper;
+
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +26,8 @@ public class EditorActivity extends AppCompatActivity {
     private EditText categoryEditText;
     private Spinner mealSpinner;
     private int meal;
+    private int today;
+    private DataDbHelper dataDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +39,31 @@ public class EditorActivity extends AppCompatActivity {
         mealSpinner = (Spinner) findViewById(R.id.spinner_meal);
 
         setupSpinner();
+
+        today = new Dates().getTodayDate();
+        dataDbHelper = new DataDbHelper(this);
+    }
+
+    /**
+     * Gets user input from the entries and adds them into Meal database
+     */
+
+    public void insertMealData() {
+
+        String foodInput = foodEditText.getText().toString().trim();
+        String foodCategoryInput = categoryEditText.getText().toString().trim();
+
+        SQLiteDatabase mealDb = dataDbHelper.getWritableDatabase();
+
+        ContentValues mealValues = new ContentValues();
+
+        mealValues.put(DataContract.MealEntry.COLUMN_MEAL_DATE, today);
+        mealValues.put(DataContract.MealEntry.COLUMN_MEAL_TYPE, meal);
+        mealValues.put(DataContract.MealEntry.COLUMN_FOOD, foodInput);
+        mealValues.put(DataContract.MealEntry.COLUMN_FOOD_CATEGORY, foodCategoryInput);
+
+        long newRowId = mealDb.insert(DataContract.MealEntry.TABLE_NAME, null, mealValues);
+        Log.v("New row id", "New row id" + newRowId);
     }
 
     /**
@@ -87,7 +121,8 @@ public class EditorActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_save_meal:
-                // WIP
+                insertMealData();
+                finish();
                 return true;
             case R.id.action_delete_all_entries:
                 // WIP
