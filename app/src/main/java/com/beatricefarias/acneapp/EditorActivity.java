@@ -5,10 +5,9 @@ import com.beatricefarias.acneapp.Database.DataContract.MealEntry;
 import com.beatricefarias.acneapp.Database.DataDbHelper;
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;

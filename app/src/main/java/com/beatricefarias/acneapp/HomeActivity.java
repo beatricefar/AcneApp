@@ -3,8 +3,8 @@ package com.beatricefarias.acneapp;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,13 +13,8 @@ import android.widget.TextView;
 import com.beatricefarias.acneapp.Database.DataContract.MealEntry;
 import com.beatricefarias.acneapp.Database.DataDbHelper;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 public class HomeActivity extends AppCompatActivity {
 
-    @BindView(R.id.action_add_meal)
     FloatingActionButton addMeal;
 
     private Intent editorActivity;
@@ -29,7 +24,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        ButterKnife.bind(this);
         setTitle(R.string.home_activity);
 
         dataDbHelper = new DataDbHelper(this);
@@ -37,7 +31,6 @@ public class HomeActivity extends AppCompatActivity {
         displayDatabaseInfo();
     }
 
-    @OnClick(R.id.action_add_meal)
     public void addMeal(FloatingActionButton addMeal) {
         editorActivity = new Intent(HomeActivity.this, EditorActivity.class);
         startActivity(editorActivity);
